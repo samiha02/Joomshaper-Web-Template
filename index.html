@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Design-Test</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body>
+	<section class="upper" id="up">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="clouds">
+					<ul>
+						<MARQUEE DIRECTION= scroll scrolldelay=120><li class="img4"><img src="img/cloud-5.png"></li></MARQUEE>
+						<MARQUEE DIRECTION= scroll scrolldelay=180><li class="img5"><img src="img/cloud-2.png"></li></MARQUEE>
+					</ul>
+				</div>
+				<h3>We build successful, long lasting,<br/>profitable products for our clients<h3>
+
+				<div id = "container">
+					<div id="counter"></div>
+					<!--<div class="box title">Days</div>-->
+					<div class="box title">Hours</div>
+					<div class="box title">Minutes</div>
+					<div class="box title">Seconds</div>
+				</div>
+
+				<div class="clouds">
+					<ul>
+						<MARQUEE DIRECTION= scroll scrolldelay=180 truespeed=truespeed><li class="img1"><img src="img/cloud-3.png"></li></MARQUEE>
+						<MARQUEE DIRECTION= scroll scrolldelay=120><li class="img2"><img src="img/cloud-4.png"></li></MARQUEE>
+						<MARQUEE DIRECTION= scroll scrolldelay=250><li class="img3"><img src="img/cloud-1.png"></li></MARQUEE>
+					</ul>
+				</div>
+
+				<a href="#id" target="_blank">
+ 					<button class="btn btn-default-lg">Get Started</button>
+ 				</a>
+				<img src="img/hill.png">
+			</div>
+		</div>
+	</section>
+	<!--end 1st section-->
+
+	
+	<section class="middle">
+		<div class="container-fluid">
+			<div class="row middle1">
+				<div class="col-lg-6 text text1">
+					<h3>We build successful,<br/>long-lasting</h3>
+					<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alterarion in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+					<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alterarion in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+					<a href="#up"><button class="btn btn-default-lg">Get Started</button></a>
+				</div>
+				<div class="col-lg-6 feature">
+					<img src="img/feature1.jpg">
+				</div>
+			</div>
+
+			<div class="row middle2">
+				<div class="col-lg-6 feature">
+					<img src="img/feature2.png">
+				</div>
+				<div class="col-lg-6 text text2">
+					<h3>We build successful,<br/>long-lasting</h3>
+					<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alterarion in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+					<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alterarion in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+					<a href="#up"><button class="btn btn-default-lg">Get Started</button></a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="footer">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="text">
+					<h3>Carousel</h3>
+					<p>There are many variations of passages of Lorem Ipsum available, but they
+					<br/> have suffered alterarion in some form, by injected humour.</p>
+				</div>
+			</div>
+			<div class="row footers">
+				<div class="col-lg-3 img1" ><img src="img/person1.png">
+					<div class="content"><h5>Yi Chan Hwa</h5><h6>Business Developer</h6></div>
+				</div>
+				<div class="col-lg-3"><img src="img/person2.png"></div>
+				<div class="col-lg-3"><img src="img/person3.png"></div>
+				<div class="col-lg-3"><img src="img/person1.png"></div>
+			</div>
+		</div>
+	</section>
+	<script src="js/jquery.js" type="text/javascript"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="jquery.countdown.min.js"></script>
+
+	<script>
+		var countDownDate = new Date("Jan 1, 2020 00:00:00").getTime();
+		var x = setInterval(function(){
+			var time = new Date().getTime();
+			var timeleft = countDownDate - time;
+
+			//var days = Math.floor(timeleft/(1000*60*60*24));
+			var hours = Math.floor((timeleft%(1000*60*60*24))/(1000*60*60));
+			var minutes = Math.floor((timeleft % (1000*60*60))/(1000*60));
+			var seconds = Math.floor((timeleft%(1000*60))/1000);
+			document.getElementById("counter").innerHTML = '</div><div class = "box time">' + hours + '</div><div class = "box time">' + minutes + '</div><div class = "box time">' + seconds + '</div>'; 
+		}, 1000);
+	</script>
+	
+</body>
+</html>
